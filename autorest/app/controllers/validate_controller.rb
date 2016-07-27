@@ -1,18 +1,29 @@
 class ValidateController < ApplicationController
+  include GenerateHelper
+
   def index
   end
 
   def swagger
-    params.to_s
-    puts "We'll pass this parameters to the AutoRest and collect gzip to be sent back."
+    autorest_version = params[:autorestVersion]
+    spec_url = params[:specUrl]
+    modeler = params[:modeler]
+    validation_level = params[:validationLevel]
 
     begin
+      timestamp = Time.now.to_i.to_s
+      cmd_line_arguments = {
+          '-Input': spec_url,
+          '-CodeGenerator': 'NONE',
+          '-Modeler': modeler,
+          '-ValidationLevel': validation_level
+      }
 
-      # file_path = ''
-      # send_file file_path
-      render :action => 'index'
-    rescue Exception
-      puts "On error we should render error page."
+      log= execute_autorest(autorest_version, cmd_line_arguments)
+      render plain: log
+    rescue AutoRestGenerationError => ex
+      puts "On error we should render error page. #{ex.msg}"
+      render json: { :message => ex.msg }
     end
   end
 end

@@ -70,7 +70,6 @@
       <fieldset class="form-group">
         <%= label_tag(:validationLevel, "Swagger Generation validation level") %>
         <%= select_tag(:validationLevel, options_for_select([
-                                                        ['Error', "Error"],
                                                         ['Info', "Info"],
                                                         ['Warning', "Warning"]]
         ), {:class => 'form-control'})  %>
