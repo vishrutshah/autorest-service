@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>AutoRest as a Service</title>
+  <title>Hackathon2016</title>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -27,26 +27,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">AutoRest as a Service</a>
+      <a class="navbar-brand" href="/">Hackathon 2016</a>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" placeholder="Email" class="form-control">
-        </div>
-        <div class="form-group">
-          <input type="password" placeholder="Password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-success">Sign in</button>
-      </form>
-    </div><!--/.navbar-collapse -->
   </div>
 </nav>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   <div class="container">
-
+    <p></p>
+    <p>Get ready to receive your SDK client!!!</p>
   </div>
 </div>
 
@@ -117,17 +107,17 @@
 
       <fieldset class="form-group">
         <%= label_tag(:namespace, "SDK Namespace") %>
-        <%= text_field_tag(:namespace, nil, {:placeholder => 'SDK Namespace', :class => 'form-control', :required => true}) %>
+        <%= text_field_tag(:namespace, nil, {:placeholder => 'SDK Namespace', :class => 'form-control'}) %>
       </fieldset>
 
       <fieldset class="form-group">
         <%= label_tag(:packageName, "SDK Package Name") %>
-        <%= text_field_tag(:packageName, nil, {:placeholder => 'SDK Package Name', :class => 'form-control', :required => true}) %>
+        <%= text_field_tag(:packageName, nil, {:placeholder => 'SDK Package Name', :class => 'form-control'}) %>
       </fieldset>
 
       <fieldset class="form-group">
         <%= label_tag(:packageVersion, "SDK Package Version") %>
-        <%= text_field_tag(:packageVersion, nil, {:placeholder => 'SDK Package Version', :class => 'form-control', :required => true}) %>
+        <%= text_field_tag(:packageVersion, nil, {:placeholder => 'SDK Package Version', :class => 'form-control'}) %>
       </fieldset>
 
       <fieldset class="form-group">
@@ -140,11 +130,6 @@
         <%= text_field_tag(:validationLevel, nil, {:placeholder => 'SDK Generation validation level', :class => 'form-control'}) %>
       </fieldset>
 
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" required="required"> I agree to Terms and conditions.
-        </label>
-      </div>
       <button type="submit" class="btn btn-primary">Submit</button>
   <% end %>
 

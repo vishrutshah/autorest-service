@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'validate/index'
+  post 'validate/swagger'
+
   root 'welcome#index'
 
   get 'generate/client'

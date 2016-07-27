@@ -1,10 +1,8 @@
-class GenerateController < ApplicationController
-  include GenerateHelper
-  def client
-
+class ValidateController < ApplicationController
+  def index
   end
 
-  def create
+  def swagger
     params.to_s
     puts "We'll pass this parameters to the AutoRest and collect gzip to be sent back."
 
@@ -12,7 +10,7 @@ class GenerateController < ApplicationController
 
       # file_path = ''
       # send_file file_path
-      render :action => 'client'
+      render :action => 'index'
     rescue Exception
       puts "On error we should render error page."
     end
