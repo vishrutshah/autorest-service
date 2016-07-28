@@ -36,7 +36,7 @@
 <div class="jumbotron">
   <div class="container">
     <p></p>
-    <p>Get ready to receive your SDK client!!!</p>
+    <p>Get ready to receive your SDK client!!! Remember to unzip using tar -xvzf filename.tar.gz -C path_to_dir </p>
   </div>
 </div>
 
@@ -55,7 +55,7 @@
 
       <fieldset class="form-group">
         <%= label_tag(:specUrl, "Swagger Spec Url") %>
-        <%= text_field_tag(:specUrl, nil, {:placeholder => 'Swagger Specification Url', :class => 'form-control', :required => true}) %>
+        <%= text_field_tag(:specUrl, @swagger_url, {:placeholder => 'Swagger Specification Url', :class => 'form-control', :required => true}) %>
       </fieldset>
 
       <fieldset class="form-group">

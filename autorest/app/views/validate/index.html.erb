@@ -55,7 +55,7 @@
 
       <fieldset class="form-group">
         <%= label_tag(:specUrl, "Swagger Spec Url") %>
-        <%= text_field_tag(:specUrl, nil, {:placeholder => 'Swagger Specification Url', :class => 'form-control', :required => true}) %>
+        <%= text_field_tag(:specUrl, @swagger_url, {:placeholder => 'Swagger Specification Url', :class => 'form-control', :required => true}) %>
       </fieldset>
 
 
@@ -71,7 +71,8 @@
         <%= label_tag(:validationLevel, "Swagger Generation validation level") %>
         <%= select_tag(:validationLevel, options_for_select([
                                                         ['Info', "Info"],
-                                                        ['Warning', "Warning"]]
+                                                        ['Warning', "Warning"],
+                                                        ['Error', "Error"]]
         ), {:class => 'form-control'})  %>
       </fieldset>
 

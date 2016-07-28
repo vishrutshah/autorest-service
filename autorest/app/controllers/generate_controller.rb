@@ -2,7 +2,11 @@ class GenerateController < ApplicationController
   include GenerateHelper
 
   def client
-
+    unless params[:swagger_url].nil?
+      @swagger_url = params[:swagger_url]
+    else
+      @swagger_url = ''
+    end
   end
 
   def create

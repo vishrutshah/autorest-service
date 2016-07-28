@@ -2,6 +2,11 @@ class ValidateController < ApplicationController
   include GenerateHelper
 
   def index
+    unless params[:swagger_url].nil?
+      @swagger_url = params[:swagger_url]
+    else
+      @swagger_url = ''
+    end
   end
 
   def swagger
